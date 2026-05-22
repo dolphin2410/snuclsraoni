@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    border: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnContainer {
+    margin-top: 20px;
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+}
+
+.btn {
+    display: block;
+    width: 45%;
+    background-color: black;
+    font-size: 2rem;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn[data-disabled='true'] {
+    background-color: rgb(175, 175, 175);
+    cursor: not-allowed;
+}
+
+.checkbox {
+    display: none;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.textInput {
+    display: block;
+    font-size: 2rem;
+    width: 200px;
+    margin: 10px 0px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(227, 227, 227);
+}
+
+.textInput::placeholder {
+    color: rgb(175, 175, 175);
+    text-align: center;
+}
+
+.textInput:focus {
+    outline: none;
+    border: 1px solid rgb(175, 239, 175);
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1), 0 0 5px rgb(175, 239, 175);
+}
+
+label {
+    display: block;
+    font-size: 2rem;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    margin: 10px 0px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: rgb(229, 229, 229);
+    box-shadow: 0 30px 30px rgba(0, 0, 0, 0.1);
+}
+
+label[data-checked='true'] {
+    background-color: rgb(175, 239, 175);
+}
+
+.radio {
+    display: none;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}

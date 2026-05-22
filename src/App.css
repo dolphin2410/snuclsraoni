@@ -1,0 +1,18 @@
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    color: rgb(255, 179, 0);
+}
+
+.App {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.description {
+    color: rgb(255, 119, 0);
+}
