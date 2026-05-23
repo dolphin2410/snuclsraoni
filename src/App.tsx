@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <h1>라오니 점수 관리자</h1>
-      {gameSchema.length > pageRef && <h2>{gameSchema[pageRef].name} <span className="description">[{gameSchema[pageRef].description}]</span></h2>}
+      {gameSchema.length > pageRef && <h2>{gameSchema[pageRef].name} <span className="description">[{gameSchema[pageRef].qType}]</span></h2>}
       <GamePage index={pageRef} setPageRef={setPageRef} />
     </div>
   );
