@@ -35,7 +35,7 @@ export default function GamePage({ index, setPageRef }: GamePageProps) {
     for (let i = 0; i < gameSchema.length; i++) {
       for (let j = 1; j <= 5; j++) {
         scores[j - 1] +=
-          ((gameState[i] as any)?.[j] || 0) * gameSchema[i].scale;
+          ((gameState[i] as any)?.[j] || 0) * gameSchema[i].unit;
       }
     }
 
@@ -76,7 +76,7 @@ export default function GamePage({ index, setPageRef }: GamePageProps) {
   const currPageData = gameSchema[index];
   if (!currPageData) return null;
 
-  if (currPageData.description === "sort") {
+  if (currPageData.qType === "sort") {
     return (
       <div className={styles.container}>
         <input
@@ -156,7 +156,7 @@ export default function GamePage({ index, setPageRef }: GamePageProps) {
   // -------------------------------------------------------------------
   // 2. MULTISELECT 타입 (체크박스 다중 선택)
   // -------------------------------------------------------------------
-  else if (currPageData.description === "multiselect") {
+  else if (currPageData.qType === "multiselect") {
     return (
       <div className={styles.container}>
         <input
@@ -246,7 +246,7 @@ export default function GamePage({ index, setPageRef }: GamePageProps) {
         </div>
       </div>
     );
-  } else if (currPageData.description === "select") {
+  } else if (currPageData.qType === "select") {
     return (
       <div className={styles.container}>
         <input
